@@ -2020,65 +2020,93 @@
 </script>
 
 <!-- Fullscreen presenter button -->
-<button id="fs-btn" title="Full Screen Preview" aria-label="Toggle fullscreen">
-  <svg id="fs-icon-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
-  <svg id="fs-icon-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/></svg>
-</button>
+<div id="fs-wrap">
+  <button id="fs-btn" title="Full Screen Preview" aria-label="Toggle fullscreen">
+    <svg id="fs-icon-enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+    <svg id="fs-icon-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/></svg>
+    <span id="fs-label">FULL SCREEN</span>
+  </button>
+</div>
 <style>
-  #fs-btn {
+  #fs-wrap {
     position: fixed;
-    top: 18px;
-    left: 18px;
-    z-index: 2147483100;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(0,224,255,0.4);
-    border-radius: 12px;
-    background: rgba(4,6,15,0.75);
-    backdrop-filter: blur(12px);
-    color: #00e0ff;
-    cursor: pointer;
+    bottom: 24px;
+    right: 24px;
+    z-index: 2147483647;
+    pointer-events: auto;
+  }
+  #fs-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: background 0.2s, border-color 0.2s, transform 0.2s, opacity 0.3s;
-    opacity: 0.7;
+    gap: 10px;
+    padding: 12px 22px 12px 16px;
+    border: 2px solid #00e0ff;
+    border-radius: 14px;
+    background: rgba(4,6,15,0.92);
+    backdrop-filter: blur(16px);
+    color: #00e0ff;
+    cursor: pointer;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: 0 0 24px rgba(0,224,255,0.3), 0 4px 16px rgba(0,0,0,0.5);
+    transition: all 0.25s ease;
+    animation: fs-pulse 2.5s ease-in-out infinite;
   }
   #fs-btn:hover {
-    background: rgba(0,224,255,0.15);
-    border-color: #00e0ff;
-    opacity: 1;
-    transform: scale(1.08);
+    background: rgba(0,224,255,0.2);
+    border-color: #fff;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(0,224,255,0.5), 0 4px 20px rgba(0,0,0,0.6);
+    transform: scale(1.06);
+    animation: none;
   }
   #fs-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
   }
-  @media print { #fs-btn { display: none !important; } }
+  @keyframes fs-pulse {
+    0%, 100% { box-shadow: 0 0 24px rgba(0,224,255,0.3), 0 4px 16px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0 0 36px rgba(0,224,255,0.55), 0 4px 16px rgba(0,0,0,0.5); }
+  }
+  @media print { #fs-wrap { display: none !important; } }
+  :fullscreen #fs-label { display: none; }
+  :fullscreen #fs-btn { padding: 10px; border-radius: 10px; opacity: 0.5; }
+  :fullscreen #fs-btn:hover { opacity: 1; }
 </style>
 <script>
 (function() {
-  const btn = document.getElementById('fs-btn');
-  const iconEnter = document.getElementById('fs-icon-enter');
-  const iconExit = document.getElementById('fs-icon-exit');
+  var btn = document.getElementById('fs-btn');
+  var iconEnter = document.getElementById('fs-icon-enter');
+  var iconExit = document.getElementById('fs-icon-exit');
+  var label = document.getElementById('fs-label');
   if (!btn) return;
 
   function updateIcon() {
-    const isFs = !!document.fullscreenElement;
+    var isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
     iconEnter.style.display = isFs ? 'none' : 'block';
     iconExit.style.display = isFs ? 'block' : 'none';
+    if (label) label.textContent = isFs ? '' : 'FULL SCREEN';
   }
 
-  btn.addEventListener('click', function() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(function(){});
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    var el = document.documentElement;
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (el.requestFullscreen) el.requestFullscreen();
+      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
     } else {
-      document.exitFullscreen().catch(function(){});
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     }
   });
 
   document.addEventListener('fullscreenchange', updateIcon);
+  document.addEventListener('webkitfullscreenchange', updateIcon);
 })();
 </script>
 </body>
