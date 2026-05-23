@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>INCIC — מרכז לאומי לחדשנות, ידע ומצוינות בסייבר</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="font-size: 30px">
+<deck-stage>
+
+<!-- ============================================
+     SLIDE 01 — COVER
+     ============================================ -->
+<section data-screen-label="01 Cover">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+
+  <!-- Animated background: orbital network -->
+  <svg class="cover-orbit" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" style="position:absolute; inset:0; width:100%; height:100%; opacity:0.5;">
+    <defs>
+      <radialGradient id="orbCenter" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#00e0ff" stop-opacity="0.5"/>
+        <stop offset="40%" stop-color="#3658d4" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#04060f" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00e0ff" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#ff347a" stop-opacity="0.4"/>
+      </linearGradient>
+    </defs>
+    <circle cx="1450" cy="540" r="500" fill="url(#orbCenter)"/>
+    <g style="transform-origin: 1450px 540px; animation: spin-slow 60s linear infinite;">
+      <ellipse cx="1450" cy="540" rx="480" ry="170" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.5" transform="rotate(20 1450 540)"/>
+      <ellipse cx="1450" cy="540" rx="380" ry="380" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.3"/>
+      <ellipse cx="1450" cy="540" rx="280" ry="120" fill="none" stroke="url(#ringGrad)" stroke-width="1" opacity="0.6" transform="rotate(-30 1450 540)"/>
+    </g>
+    <g style="transform-origin: 1450px 540px; animation: spin-slow 90s linear infinite reverse;">
+      <circle cx="1930" cy="540" r="6" fill="#00e0ff"/>
+      <circle cx="1450" cy="160" r="4" fill="#ff347a"/>
+      <circle cx="970" cy="540" r="5" fill="#00e0ff"/>
+    </g>
+  </svg>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // CLASSIFIED PROPOSAL</span></div>
+    <div class="right"><span class="dot"></span><span>STATE OF ISRAEL</span></div>
+  </div>
+
+  <div style="position:absolute; right:96px; top:200px; max-width: 980px;">
+    <div class="h-eyebrow anim-in">ISRAELI NATIONAL CYBERSECURITY INNOVATION CENTER</div>
+    <h1 class="h-mega anim-in d1" style="font-size: 96px;">
+      מרכז לאומי <br>
+      לחדשנות, ידע <br>
+      ומצוינות <span class="accent">בסייבר</span>
+    </h1>
+    <div style="display:flex; gap:32px; margin-top: 48px; align-items:center;" class="anim-in d3">
+      <img src="assets/incic-logo.png" alt="INCIC" style="height: 80px; filter: drop-shadow(0 0 20px rgba(0,224,255,0.3));">
+      <div style="border-right: 2px solid var(--cyan); padding-right: 24px; padding-left: 0;">
+        <div class="body-md" style="color: var(--ink); font-weight:600; font-size: 26px;">תשתית לאומית שתחזק את:</div>
+        <div class="body-md" style="margin-top: 4px; font-size: 24px;">החוסן · הרציפות · ההיערכות ל‑<em class="tag" style="font-size: 24px;">AI</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat ticker bottom -->
+  <div style="position:absolute; right: 96px; left: 96px; bottom: 100px; display:grid; grid-template-columns: repeat(4, 1fr); gap: 24px;" class="anim-in d5">
+    <div class="card" style="padding: 20px 24px;">
+      <div class="card-tag" style="font-size: 21px; line-height: 2.4">NATO · NIST</div>
+      <div style="font-family:'Rubik'; font-weight:800; font-size: 28px; color: var(--ink);">העולם פעל</div>
+      <div class="body-md" style="font-size: 25px; margin-top: 4px">בנו מעבדות הגנה לאומיות</div>
+    </div>
+    <div class="card" style="padding: 20px 24px;">
+      <div class="card-tag" style="font-size: 20px; line-height: 2.4">EUROPE · SINGAPORE · USA</div>
+      <div style="font-family:'Rubik'; font-weight:800; font-size: 28px; color: var(--ink);">למדנו מהמובילים</div>
+      <div class="body-md" style="font-size: 25px; margin-top: 4px">המרכזים המובילים בעולם</div>
+    </div>
+    <div class="card" style="padding: 20px 24px;">
+      <div class="card-tag" style="font-size: 21px; line-height: 2.4">FIRST IN THE WORLD</div>
+      <div style="font-family:'Rubik'; font-weight:800; font-size: 28px; color: var(--cyan);">ECOSYSTEM</div>
+      <div class="body-md" style="font-size: 25px; margin-top: 4px">לאומי מלא — עליונות טכנולוגית</div>
+    </div>
+    <div class="card" style="padding: 20px 24px; border-color: var(--magenta);">
+      <div class="card-tag" style="color: var(--magenta); font-size: 21px; font-weight: 600; line-height: 2.4">THE MOMENT</div>
+      <div style="font-family:'Rubik'; font-weight:800; font-size: 28px; color: var(--magenta);">ישראל הראשונה</div>
+      <div class="body-md" style="font-size: 25px; margin-top: 4px">שתבנה Ecosystem לאומי מלא</div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span>// PROPOSAL.v1.0 / 2026</span>
+    <span>01 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 02 — Historic Moment
+     ============================================ -->
+<section data-screen-label="02 Historic Moment">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // BACKGROUND</span></div>
+    <div class="right"><span class="dot"></span><span>02 — HISTORIC MOMENT</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 01 — רקע</div>
+    <h2 class="h-big anim-in d1" style="max-width: 1300px;">
+      הקמת מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <p class="body-lg anim-in d2" style="max-width: 1100px; margin-top: 18px;">
+      רקע להקמת גוף לאומי מאוחד שירכז יכולות מחקר, חדשנות, תפעול, אימון והכשרות בתחומי הסייבר וה‑<em class="tag">AI</em> עבור מדינת ישראל.
+    </p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1.05fr; gap: 56px; margin-top: 48px; flex: 1;">
+      <!-- Left: declaration -->
+      <div class="anim-in d3" style="display:flex; flex-direction: column; justify-content: center;">
+        <div style="font-family:'Rubik'; font-weight:900; font-size: 88px; line-height: 1; color: var(--ink);">
+          אנחנו <br>נמצאים <br>
+          <span style="background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">ברגע היסטורי!</span>
+        </div>
+        <div class="divider"></div>
+        <p class="body-lg" style="color: var(--ink);">
+          העולם כולו משתנה בקצב חסר תקדים — <br>
+          <span class="accent-mag" style="font-weight:700;">אך בישראל השינוי הזה מתרחש תחת אש.</span>
+        </p>
+        <p class="body-md" style="margin-top: 16px;">
+          מאז תחילת המלחמה, המרחב הדיגיטלי הפך לזירת לחימה מלאה הכוללת בין היתר מתקפות על הרשתות, הענן, מערכות הבקרה, תודעה, מערכות <em class="tag">AI</em> ועוד.
+        </p>
+        <div style="margin-top: 28px; display:inline-block; padding: 14px 22px; border: 1px solid var(--magenta); border-radius: 12px; background: rgba(255,52,122,0.08); width: fit-content;">
+          <span style="font-family:'Rubik'; font-weight:800; font-size: 22px; color: var(--magenta);">מדובר בהגנה על המדינה עצמה!</span>
+        </div>
+      </div>
+
+      <!-- Right: critical services grid -->
+      <div class="anim-in d4">
+        <div class="card-tag" style="margin-bottom: 16px;">// כמעט כל שירות חיוני בישראל תלוי במערכות דיגיטליות</div>
+        <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+          <!-- Services list -->
+          <div class="srv-cell"><div class="srv-icon">⚡</div><span>חשמל</span></div>
+          <div class="srv-cell"><div class="srv-icon">💧</div><span>מים</span></div>
+          <div class="srv-cell"><div class="srv-icon">⊕</div><span>בתי חולים</span></div>
+          <div class="srv-cell"><div class="srv-icon">🚆</div><span>רכבות</span></div>
+          <div class="srv-cell"><div class="srv-icon">🚌</div><span>תחבורה</span></div>
+          <div class="srv-cell"><div class="srv-icon">⚓</div><span>נמלים</span></div>
+          <div class="srv-cell"><div class="srv-icon">$</div><span>בנקים</span></div>
+          <div class="srv-cell"><div class="srv-icon">📡</div><span>תקשורת</span></div>
+          <div class="srv-cell"><div class="srv-icon">🏛</div><span>רשויות ממשלה</span></div>
+          <div class="srv-cell" style="grid-column: span 2;"><div class="srv-icon">🆘</div><span>מערכות חירום והצלה</span></div>
+          <div class="srv-cell"><div class="srv-icon">⚙</div><span>תעשייה וביטחון</span></div>
+        </div>
+        <style>
+          .srv-cell {
+            border: 1px solid var(--line);
+            background: rgba(12, 18, 48, 0.5);
+            border-radius: 12px;
+            padding: 16px 14px;
+            display: flex; align-items: center; gap: 10px;
+            font-family:'Heebo'; font-weight: 600; font-size: 17px;
+            color: var(--ink);
+            position: relative;
+            overflow: hidden;
+            transition: all .3s;
+          }
+          .srv-cell::after {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(90deg, transparent, rgba(0,224,255,0.08), transparent);
+            transform: translateX(-100%);
+            animation: scan-h 4s infinite;
+          }
+          @keyframes scan-h {
+            0% { transform: translateX(-100%); }
+            50%, 100% { transform: translateX(100%); }
+          }
+          .srv-cell:nth-child(odd)::after { animation-delay: 1s; }
+          .srv-cell:nth-child(3n)::after { animation-delay: 2s; }
+          .srv-icon {
+            width: 28px; height: 28px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(0,224,255,0.2), rgba(33,64,153,0.2));
+            border: 1px solid var(--line-strong);
+            color: var(--cyan);
+            flex-shrink: 0;
+          }
+        </style>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">SYS // OK</span><span>SECTOR // CRITICAL</span><span class="hot">THREAT LVL // ELEVATED</span></span>
+    <span>02 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 03 — Impact of one attack
+     ============================================ -->
+<section data-screen-label="03 Attack Impact">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // BACKGROUND</span></div>
+    <div class="right"><span class="dot"></span><span>03 — IMPACT</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 01 — רקע</div>
+    <h2 class="h-big anim-in d1" style="max-width: 1300px;">
+      הקמת מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <p class="body-lg anim-in d2" style="max-width: 1100px; margin-top: 12px;">
+      רקע להקמת גוף לאומי מאוחד שירכז יכולות מחקר, חדשנות, תפעול, אימון והכשרות בתחומי הסייבר וה‑<em class="tag">AI</em> עבור מדינת ישראל.
+    </p>
+
+    <div style="display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; margin-top: 38px; flex: 1;">
+      <!-- Under attack zones -->
+      <div class="anim-in d3">
+        <h3 class="h-med" style="margin-bottom: 8px;">
+          המשק הישראלי <span class="accent">בדגש על:</span>
+        </h3>
+        <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 20px;">
+          <div class="zone-row"><div class="zone-bar"></div><span>תשתיות קריטיות</span></div>
+          <div class="zone-row"><div class="zone-bar"></div><span>בתי חולים</span></div>
+          <div class="zone-row"><div class="zone-bar"></div><span>מערכות תחבורה</span></div>
+          <div class="zone-row"><div class="zone-bar"></div><span>מערכות מים ואנרגיה</span></div>
+          <div class="zone-row"><div class="zone-bar"></div><span>גופי ממשלה</span></div>
+          <div class="zone-row"><div class="zone-bar"></div><span>וגופים חיוניים נוספים</span></div>
+        </div>
+        <style>
+          .zone-row {
+            display:flex; align-items:center; gap:14px;
+            font-family:'Heebo'; font-weight: 600; font-size: 22px; color: var(--ink);
+            padding: 14px 18px;
+            border-right: 3px solid var(--magenta);
+            background: linear-gradient(90deg, rgba(255,52,122,0.08), transparent 60%);
+          }
+          .zone-bar {
+            width: 80px; height: 6px;
+            background: linear-gradient(90deg, var(--magenta), transparent);
+            border-radius: 3px;
+            animation: pulse-bar 2s infinite;
+          }
+          @keyframes pulse-bar {
+            0%, 100% { opacity: 1; transform: scaleX(1); }
+            50% { opacity: 0.4; transform: scaleX(0.7); }
+          }
+        </style>
+        <p class="body-md anim-in d5" style="margin-top: 24px; color: var(--ink);">
+          נמצאים תחת מתקפות סייבר אינטנסיביות מתמשכות, המנוהלות ע"י מדינות ואשר הפכו לאיום על <span class="accent-mag" style="font-weight:700;">הרציפות התפקודית הלאומית של ישראל.</span>
+        </p>
+      </div>
+
+      <!-- One attack consequences -->
+      <div class="anim-in d4" style="position: relative;">
+        <div style="border:1px solid var(--magenta); border-radius: 20px; padding: 36px; background: linear-gradient(135deg, rgba(255,52,122,0.06), rgba(33,64,153,0.06)); position: relative; overflow:hidden;">
+          <div style="position:absolute; top:-40px; left:-40px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(255,52,122,0.3), transparent 70%); filter: blur(40px);"></div>
+          <div class="card-tag" style="color: var(--magenta);">// SINGLE EVENT IMPACT</div>
+          <h3 class="h-med" style="margin-top: 8px;">מתקפת סייבר אחת משמעותית יכולה לגרום ל:</h3>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px;">
+            <div class="impact-cell">
+              <div class="impact-icon">⊘</div>
+              <div>השבתת שירותים <br>לאזרחים</div>
+            </div>
+            <div class="impact-cell">
+              <div class="impact-icon">⚕</div>
+              <div>פגיעה בתפקוד <br>בתי חולים</div>
+            </div>
+            <div class="impact-cell">
+              <div class="impact-icon">⊛</div>
+              <div>שיבושי <br>תחבורה</div>
+            </div>
+            <div class="impact-cell">
+              <div class="impact-icon">₪</div>
+              <div>נזק כלכלי <br>של מיליארדים</div>
+            </div>
+            <div class="impact-cell">
+              <div class="impact-icon">⚐</div>
+              <div>פגיעה <br>באמון הציבור</div>
+            </div>
+            <div class="impact-cell">
+              <div class="impact-icon">✦</div>
+              <div>פגיעה <br>בביטחון הלאומי</div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .impact-cell {
+            display: flex; gap: 14px; align-items: center;
+            padding: 14px 16px;
+            background: rgba(8, 12, 30, 0.7);
+            border: 1px solid var(--line-strong);
+            border-radius: 12px;
+            font-family:'Heebo'; font-weight: 600; font-size: 17px;
+            color: var(--ink);
+            line-height: 1.25;
+          }
+          .impact-icon {
+            width: 40px; height: 40px;
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--magenta);
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 0 16px var(--magenta-glow);
+          }
+        </style>
+
+        <div class="anim-in d6" style="margin-top: 24px; padding: 18px 22px; border: 1px solid var(--cyan); border-radius: 12px; background: rgba(0,224,255,0.06);">
+          <span style="font-family:'Rubik'; font-weight:800; font-size: 22px; color: var(--cyan);">
+            במציאות הזו, ישראל זקוקה לתשתית לאומית חדשה שתגן על החוסן התפקודי של המדינה!
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="hot">CYBER EVENT // SCENARIO</span><span class="live">RESILIENCE // REQUIRED</span></span>
+    <span>03 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 04 — AI changes everything
+     ============================================ -->
+<section data-screen-label="04 AI Changes Game">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // AI INFLECTION</span></div>
+    <div class="right"><span class="dot"></span><span>04 — AI</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in" style="color: var(--magenta);">// THE GAME CHANGER</div>
+    <h2 class="h-big anim-in d1">
+      <em class="tag" style="font-size: 1em;">AI</em> משנה את כללי המשחק: <br>
+      <em class="tag" style="font-size: 1em;">AI</em> משנה את עולם <span class="accent">הסייבר</span>
+    </h2>
+    <p class="body-lg anim-in d2" style="max-width: 1300px; margin-top: 18px;">
+      בזמן שהמשק הישראלי מתמודד עם איומי סייבר מתמשכים מתרחשת ברקע מהפכה נוספת: <span class="bright" style="font-weight:700;">מהפכת הבינה המלאכותית.</span>
+    </p>
+
+    <!-- Split: Attack vs Defense -->
+    <div style="display:grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin-top: 38px; flex: 1; align-items: stretch;">
+      <!-- Attack side -->
+      <div class="anim-in d3" style="border: 1px solid var(--magenta); border-radius: 20px; padding: 32px; background: linear-gradient(180deg, rgba(255,52,122,0.08), rgba(255,52,122,0.02)); position: relative; overflow:hidden;">
+        <div class="card-tag" style="color: var(--magenta);">// OFFENSE</div>
+        <h3 class="h-med" style="color: var(--magenta);">התוקפים משתמשים ב‑<em class="tag" style="color: var(--magenta);">AI</em>:</h3>
+        <div style="display:flex; flex-direction:column; gap: 14px; margin-top: 24px;">
+          <div class="ai-row mag">
+            <div class="ai-tag mag">01</div>
+            <div>
+              <div class="ai-h"><em class="tag" style="color: var(--magenta);">Deepfake</em></div>
+              <div class="ai-d">זיוף קולי ותדמיתי</div>
+            </div>
+          </div>
+          <div class="ai-row mag">
+            <div class="ai-tag mag">02</div>
+            <div>
+              <div class="ai-h">מתקפות אוטונומיות</div>
+              <div class="ai-d">תיאום עצמי, ללא יד אדם</div>
+            </div>
+          </div>
+          <div class="ai-row mag">
+            <div class="ai-tag mag">03</div>
+            <div>
+              <div class="ai-h">פישינג חכם</div>
+              <div class="ai-d">מותאם אישית לכל מטרה</div>
+            </div>
+          </div>
+          <div class="ai-row mag">
+            <div class="ai-tag mag">04</div>
+            <div>
+              <div class="ai-h">קוד זדוני אוטומטי</div>
+              <div class="ai-d">מתפתח ומתחמק בזמן אמת</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VS divider -->
+      <div class="anim-fade d4" style="display:flex; align-items:center; justify-content:center; flex-direction: column; gap: 12px;">
+        <div style="width:1px; flex:1; background: linear-gradient(180deg, transparent, var(--line-strong), transparent);"></div>
+        <div style="width:60px; height:60px; border-radius:50%; border:1px solid var(--cyan); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono'; font-weight:700; font-size: 16px; color: var(--cyan); background: var(--bg-0); box-shadow: 0 0 24px var(--cyan-glow);">VS</div>
+        <div style="width:1px; flex:1; background: linear-gradient(180deg, transparent, var(--line-strong), transparent);"></div>
+      </div>
+
+      <!-- Defense side -->
+      <div class="anim-in d5" style="border: 1px solid var(--cyan); border-radius: 20px; padding: 32px; background: linear-gradient(180deg, rgba(0,224,255,0.08), rgba(0,224,255,0.02)); position: relative; overflow:hidden;">
+        <div class="card-tag" style="color: var(--cyan);">// DEFENSE</div>
+        <h3 class="h-med" style="color: var(--cyan);">גם ההגנה חייבת להפוך ל‑<em class="tag">AI Native</em>:</h3>
+        <div style="display:flex; flex-direction:column; gap: 14px; margin-top: 24px;">
+          <div class="ai-row cy"><div class="ai-tag cy">01</div><div><div class="ai-h"><em class="tag">AI Detection</em></div><div class="ai-d">זיהוי מבוסס למידה רוחבית</div></div></div>
+          <div class="ai-row cy"><div class="ai-tag cy">02</div><div><div class="ai-h"><em class="tag">AI SOC</em></div><div class="ai-d">מרכז תפעולי אוטונומי</div></div></div>
+          <div class="ai-row cy"><div class="ai-tag cy">03</div><div><div class="ai-h"><em class="tag">AI Threat Intelligence</em></div><div class="ai-d">חיזוי וניטור איומים בזמן אמת</div></div></div>
+          <div class="ai-row cy"><div class="ai-tag cy">04</div><div><div class="ai-h"><em class="tag">AI Simulation</em></div><div class="ai-d">תרגול ואימון בתרחישים אדפטיביים</div></div></div>
+        </div>
+      </div>
+
+      <style>
+        .ai-row {
+          display:flex; align-items:center; gap: 16px;
+          padding: 14px 16px;
+          background: rgba(8, 12, 30, 0.5);
+          border-radius: 12px;
+          border: 1px solid var(--line);
+        }
+        .ai-row.mag { border-color: rgba(255,52,122,0.3); }
+        .ai-row.cy { border-color: rgba(0,224,255,0.3); }
+        .ai-tag {
+          font-family:'JetBrains Mono'; font-weight:700; font-size: 16px;
+          width: 34px; text-align:center;
+          padding: 4px 0;
+          border-radius: 6px;
+        }
+        .ai-tag.mag { background: var(--magenta); color: white; }
+        .ai-tag.cy { background: var(--cyan); color: var(--bg-0); }
+        .ai-h { font-family:'Heebo'; font-weight: 700; font-size: 20px; color: var(--ink); }
+        .ai-d { font-family:'Heebo'; font-weight: 400; font-size: 16px; color: var(--ink-dim); margin-top: 2px;}
+      </style>
+    </div>
+
+    <div class="anim-in d8" style="margin-top: 28px; text-align:center;">
+      <span style="font-family:'Rubik'; font-weight:800; font-size: 26px; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">
+        כל גוף במשק הישראלי יידרש להתמודד עם עולם חדש לחלוטין!
+      </span>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="hot">AI // OFFENSE</span><span class="live">AI // DEFENSE</span></span>
+    <span>04 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 05 — The National Problem (scattered)
+     ============================================ -->
+<section data-screen-label="05 Scattered">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // THE PROBLEM</span></div>
+    <div class="right"><span class="dot"></span><span>05 — FRAGMENTATION</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 56px; flex: 1;">
+      <!-- Left -->
+      <div>
+        <div class="h-eyebrow anim-in">// LO-FI POSITION</div>
+        <h2 class="h-big anim-in d1">
+          לישראל יש <br>
+          <span class="accent">נכסים מדהימים:</span>
+        </h2>
+        <div style="display:flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;" class="anim-in d2">
+          <span class="chip">אנשי מקצוע מהטובים בעולם</span>
+          <span class="chip">גופי ביטחון חזקים</span>
+          <span class="chip">אקדמיה מתקדמת</span>
+          <span class="chip">תעשיית סייבר מהטובות והמובילות בעולם</span>
+          <span class="chip">מעבדות קיימות</span>
+          <span class="chip">וחדשנות יוצאת דופן</span>
+        </div>
+
+        <div class="anim-in d4" style="margin-top: 36px; padding: 22px 26px; border-right: 4px solid var(--magenta); background: linear-gradient(90deg, rgba(255,52,122,0.1), transparent);">
+          <div class="card-tag" style="color: var(--magenta);">// BUT</div>
+          <p style="font-family:'Rubik'; font-weight:800; font-size: 26px; margin: 6px 0 0; color: var(--ink); line-height: 1.25;">
+            ועם זאת, קיימת בעיה בסיסית: <br>
+            <span class="accent-mag">היכולות האלו מפוזרות ומבוזרות!</span>
+          </p>
+        </div>
+
+        <div style="margin-top: 24px; display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;" class="anim-in d5">
+          <div class="prob-cell"><div class="prob-dot"></div><span>ידע נשאר בתוך גופים</span></div>
+          <div class="prob-cell"><div class="prob-dot"></div><span>מעבדות פועלות בנפרד</span></div>
+          <div class="prob-cell"><div class="prob-dot"></div><span><em class="tag">AI</em> מתפתח במקביל</span></div>
+        </div>
+        <style>
+          .prob-cell {
+            padding: 14px;
+            border: 1px solid var(--line-strong);
+            border-radius: 10px;
+            background: rgba(8, 12, 30, 0.6);
+            font-family:'Heebo'; font-weight:600; font-size: 16px;
+            color: var(--ink-dim);
+            display: flex; align-items: center; gap: 10px;
+          }
+          .prob-dot {
+            width: 8px; height: 8px; background: var(--magenta);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--magenta-glow);
+            flex-shrink: 0;
+          }
+        </style>
+      </div>
+
+      <!-- Right: scatter visualization -->
+      <div class="anim-fade d3" style="position:relative; display:flex; flex-direction: column;">
+        <div class="card-tag">// CURRENT STATE — FRAGMENTED</div>
+        <svg viewBox="0 0 600 500" style="width: 100%; flex: 1; margin-top: 12px;">
+          <defs>
+            <radialGradient id="nodeGlow">
+              <stop offset="0%" stop-color="#00e0ff" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#00e0ff" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="nodeGlowMag">
+              <stop offset="0%" stop-color="#ff347a" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#ff347a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- scattered, disconnected nodes -->
+          <g>
+            <circle cx="100" cy="80" r="32" fill="url(#nodeGlow)"/>
+            <circle cx="100" cy="80" r="18" fill="rgba(0,224,255,0.2)" stroke="#00e0ff" stroke-width="1.5"/>
+            <text x="100" y="84" text-anchor="middle" font-family="Heebo" font-size="11" fill="#eaf2ff">ממשלה</text>
+          </g>
+          <g>
+            <circle cx="400" cy="60" r="34" fill="url(#nodeGlowMag)"/>
+            <circle cx="400" cy="60" r="20" fill="rgba(255,52,122,0.15)" stroke="#ff347a" stroke-width="1.5"/>
+            <text x="400" y="64" text-anchor="middle" font-family="Heebo" font-size="11" fill="#eaf2ff">תעשייה</text>
+          </g>
+          <g>
+            <circle cx="520" cy="200" r="36" fill="url(#nodeGlow)"/>
+            <circle cx="520" cy="200" r="22" fill="rgba(0,224,255,0.18)" stroke="#00e0ff" stroke-width="1.5"/>
+            <text x="520" y="204" text-anchor="middle" font-family="Heebo" font-size="11" fill="#eaf2ff">אקדמיה</text>
+          </g>
+          <g>
+            <circle cx="70" cy="240" r="30" fill="url(#nodeGlowMag)"/>
+            <circle cx="70" cy="240" r="18" fill="rgba(255,52,122,0.15)" stroke="#ff347a" stroke-width="1.5"/>
+            <text x="70" y="244" text-anchor="middle" font-family="Heebo" font-size="10" fill="#eaf2ff">ביטחון</text>
+          </g>
+          <g>
+            <circle cx="280" cy="180" r="38" fill="url(#nodeGlow)"/>
+            <circle cx="280" cy="180" r="24" fill="rgba(0,224,255,0.18)" stroke="#00e0ff" stroke-width="1.5"/>
+            <text x="280" y="184" text-anchor="middle" font-family="Heebo" font-size="11" fill="#eaf2ff">מעבדות</text>
+          </g>
+          <g>
+            <circle cx="180" cy="370" r="34" fill="url(#nodeGlow)"/>
+            <circle cx="180" cy="370" r="20" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+            <text x="180" y="374" text-anchor="middle" font-family="Heebo" font-size="10" fill="#eaf2ff">תשתיות</text>
+          </g>
+          <g>
+            <circle cx="420" cy="340" r="36" fill="url(#nodeGlowMag)"/>
+            <circle cx="420" cy="340" r="22" fill="rgba(255,52,122,0.15)" stroke="#ff347a" stroke-width="1.5"/>
+            <text x="420" y="334" text-anchor="middle" font-family="Heebo" font-size="10" fill="#eaf2ff">מודיעין</text>
+            <text x="420" y="348" text-anchor="middle" font-family="Heebo" font-size="10" fill="#eaf2ff">וגופי תוה"ד</text>
+          </g>
+          <g>
+            <circle cx="320" cy="440" r="30" fill="url(#nodeGlow)"/>
+            <circle cx="320" cy="440" r="18" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+            <text x="320" y="444" text-anchor="middle" font-family="Heebo" font-size="10" fill="#eaf2ff">רגולציה</text>
+          </g>
+          <!-- "no connections" message -->
+          <text x="300" y="260" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#ff347a" letter-spacing="2">NO LINK</text>
+          <line x1="240" y1="270" x2="160" y2="280" stroke="#ff347a" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+          <line x1="360" y1="270" x2="440" y2="280" stroke="#ff347a" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+        </svg>
+
+        <div style="margin-top: 8px; padding: 18px 22px; border: 1px solid var(--cyan); border-radius: 14px; background: rgba(0,224,255,0.06);" class="anim-in d6">
+          <div class="card-tag">// THE GAP</div>
+          <p style="font-family:'Rubik'; font-weight:700; font-size: 19px; margin: 4px 0 0; color: var(--ink); line-height: 1.4;">
+            אין כיום פלטפורמה לאומית לתחום חדשנות סייבר אחת שמחברת את כלל המשק הישראלי!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim-in d8" style="margin-top: 24px; padding: 18px 24px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(12, 18, 48, 0.6); display: flex; gap: 22px; align-items: center;">
+      <span style="font-family:'Rubik'; font-weight:800; font-size: 19px; color: var(--cyan);">ישראל זקוקה למרכז חדשנות, ידע ומצוינות לאומי לסייבר אשר יחבר בין:</span>
+      <span class="chip" style="font-size: 16px;">ממשלה, תעשיה, משק ואקדמיה</span>
+      <span class="chip mag" style="font-size: 16px;">גופים ביטחון, גופי מודיעין וגופי תוה"ד</span>
+      <span class="chip amber" style="font-size: 16px;">תשתיות קריטיות, תשתיות חיוניות ורגולציה</span>
+      <span class="chip" style="font-size: 16px;">ועוד</span>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="hot">SILOS // 8</span><span class="live">LINKS // 0</span></span>
+    <span>05 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 06 — Vision
+     ============================================ -->
+<section data-screen-label="06 Vision">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // THE VISION</span></div>
+    <div class="right"><span class="dot"></span><span>06 — VISION</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 02 — חזון</div>
+    <h2 class="h-big anim-in d1" style="max-width: 1300px;">
+      מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <h3 class="h-med anim-in d2" style="margin-top: 8px; color: var(--magenta);">חזון המרכז</h3>
+
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap: 56px; margin-top: 32px; flex: 1;">
+      <!-- Left: Vision text -->
+      <div class="anim-in d3">
+        <p style="font-family:'Heebo'; font-weight: 400; font-size: 21px; line-height: 1.55; color: var(--ink); margin: 0;">
+          תשתית לאומית אחודה לחדשנות, ידע ומצוינות בתחומי הסייבר והבינה המלאכותית, אשר תחזק את <span class="accent" style="font-weight:700;">החוסן, הרציפות התפקודית והעליונות הטכנולוגית</span> של מדינת ישראל, באמצעות חיבור בין ממשלה, גופי ביטחון, תשתיות קריטיות, תעשייה ואקדמיה לכדי <span class="accent-mag" style="font-weight:700;">אקוסיסטם לאומי מתקדם אחד.</span>
+        </p>
+
+        <div style="margin-top: 32px;">
+          <div class="card-tag">// המרכז יהווה פלטפורמה לאומית:</div>
+          <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 14px;">
+            <div class="vision-row"><div class="v-num">01</div><span>למחקר וחדשנות יישומית</span></div>
+            <div class="vision-row"><div class="v-num">02</div><span>לניסויים וסימולציות</span></div>
+            <div class="vision-row"><div class="v-num">03</div><span>להכשרות, תרגול ואימון</span></div>
+            <div class="vision-row"><div class="v-num">04</div><span>לשילוב <em class="tag">AI</em> וטכנולוגיות מתקדמות בכלל עולמות הסייבר</span></div>
+            <div class="vision-row"><div class="v-num">05</div><span>להפצת ידע ומודעות</span></div>
+            <div class="vision-row"><div class="v-num">06</div><span>ולתמיכה בצרכים מבצעיים לאומיים (לרבות פוראנזיקה)</span></div>
+          </div>
+          <style>
+            .vision-row {
+              display:flex; align-items:center; gap: 14px;
+              padding: 12px 16px;
+              background: linear-gradient(90deg, rgba(0,224,255,0.06), transparent);
+              border-right: 2px solid var(--cyan);
+              font-family:'Heebo'; font-weight:600; font-size: 18px; color: var(--ink);
+            }
+            .v-num {
+              font-family:'JetBrains Mono'; font-weight:700; font-size: 16px;
+              color: var(--cyan); letter-spacing: 0.1em;
+            }
+          </style>
+        </div>
+      </div>
+
+      <!-- Right: Hub diagram -->
+      <div class="anim-fade d4" style="display:flex; align-items:center; justify-content:center; position:relative;">
+        <svg viewBox="0 0 500 500" style="width: 100%; max-width: 500px;">
+          <defs>
+            <radialGradient id="hubCenterG" cx="50%" cy="50%">
+              <stop offset="0%" stop-color="#00e0ff" stop-opacity="0.8"/>
+              <stop offset="60%" stop-color="#214099" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#04060f" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hubLink">
+              <stop offset="0%" stop-color="#00e0ff"/>
+              <stop offset="100%" stop-color="#00e0ff" stop-opacity="0.2"/>
+            </linearGradient>
+          </defs>
+          <!-- rings -->
+          <circle cx="250" cy="250" r="240" fill="none" stroke="var(--line)" stroke-width="1"/>
+          <circle cx="250" cy="250" r="180" fill="none" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"/>
+          <circle cx="250" cy="250" r="120" fill="none" stroke="var(--line-strong)" stroke-width="1"/>
+          <!-- Spokes -->
+          <g stroke="url(#hubLink)" stroke-width="1.5" fill="none">
+            <line x1="250" y1="250" x2="250" y2="40"/>
+            <line x1="250" y1="250" x2="440" y2="130"/>
+            <line x1="250" y1="250" x2="450" y2="370"/>
+            <line x1="250" y1="250" x2="250" y2="460"/>
+            <line x1="250" y1="250" x2="50" y2="370"/>
+            <line x1="250" y1="250" x2="60" y2="130"/>
+          </g>
+          <!-- Outer nodes -->
+          <g font-family="Heebo" font-size="11" fill="#eaf2ff">
+            <g class="hub-node">
+              <circle cx="250" cy="40" r="28" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+              <text x="250" y="44" text-anchor="middle">ממשלה</text>
+            </g>
+            <g class="hub-node">
+              <circle cx="440" cy="130" r="28" fill="rgba(255,52,122,0.15)" stroke="#ff347a" stroke-width="1.5"/>
+              <text x="440" y="134" text-anchor="middle">ביטחון</text>
+            </g>
+            <g class="hub-node">
+              <circle cx="450" cy="370" r="28" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+              <text x="450" y="374" text-anchor="middle">תשתיות</text>
+            </g>
+            <g class="hub-node">
+              <circle cx="250" cy="460" r="28" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+              <text x="250" y="464" text-anchor="middle">תעשייה</text>
+            </g>
+            <g class="hub-node">
+              <circle cx="50" cy="370" r="28" fill="rgba(255,52,122,0.15)" stroke="#ff347a" stroke-width="1.5"/>
+              <text x="50" y="374" text-anchor="middle">אקדמיה</text>
+            </g>
+            <g class="hub-node">
+              <circle cx="60" cy="130" r="28" fill="rgba(0,224,255,0.15)" stroke="#00e0ff" stroke-width="1.5"/>
+              <text x="60" y="134" text-anchor="middle">מודיעין</text>
+            </g>
+          </g>
+          <!-- Center hub -->
+          <circle cx="250" cy="250" r="110" fill="url(#hubCenterG)" opacity="0.8"/>
+          <circle cx="250" cy="250" r="62" fill="#0c1230" stroke="#00e0ff" stroke-width="2"/>
+          <text x="250" y="244" text-anchor="middle" font-family="Rubik" font-weight="800" font-size="22" fill="#00e0ff">INCIC</text>
+          <text x="250" y="266" text-anchor="middle" font-family="Heebo" font-size="11" fill="#eaf2ff">אקוסיסטם לאומי</text>
+          <!-- Pulse rings -->
+          <circle cx="250" cy="250" r="62" fill="none" stroke="#00e0ff" stroke-width="1">
+            <animate attributeName="r" from="62" to="180" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.6" to="0" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="250" cy="250" r="62" fill="none" stroke="#00e0ff" stroke-width="1">
+            <animate attributeName="r" from="62" to="180" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.6" to="0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+
+    <p class="body-md anim-in d6" style="margin-top: 24px; max-width: 1500px; color: var(--ink);">
+      תוך יצירת יכולת רוחבית להגנה על המשק הישראלי בעידן של איומי סייבר מתקדמים ומבוססי בינה מלאכותית וטכנולוגיות מתקדמות.
+    </p>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">HUB // LIVE</span><span>NODES // 6 SECTORS</span></span>
+    <span>06 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 07 — Goals 1-4
+     ============================================ -->
+<section data-screen-label="07 Goals 1-4">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // GOALS</span></div>
+    <div class="right"><span class="dot"></span><span>07 — GOALS 1—4</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div style="display:flex; justify-content:space-between; align-items: flex-end;">
+      <div>
+        <div class="h-eyebrow anim-in">// 03 — מטרות</div>
+        <h2 class="h-big anim-in d1">
+          מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+        </h2>
+        <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">מטרות המרכז</h3>
+      </div>
+      <div class="anim-in d3" style="font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.3em; color: var(--ink-faint);">
+        PART <span class="accent" style="font-weight:700;">1/2</span>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; flex: 1;">
+      <!-- Goal 1 -->
+      <div class="card anim-in d3">
+        <div style="display:flex; gap: 18px; align-items: flex-start;">
+          <div class="num-badge">1</div>
+          <div style="flex:1;">
+            <h4>חיזוק החוסן הלאומי והרציפות התפקודית באמצעות עליונות טכנולוגית</h4>
+            <p>יצירת יכולת לאומית מתקדמת לשיפור ההיערכות, ההתמודדות וההתאוששות של המשק הישראלי מאירועי סייבר רחבי היקף.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 2 -->
+      <div class="card anim-in d4">
+        <div style="display:flex; gap: 18px; align-items: flex-start;">
+          <div class="num-badge">2</div>
+          <div style="flex:1;">
+            <h4>יצירת פלטפורמה לאומית אחודה</h4>
+            <p>איחוד ידע, מומחיות, תשתיות ויכולות קיימות לכדי מרכז אחד שיאפשר שיתוף פעולה רוחבי בין כלל הגורמים הרלוונטיים במדינה.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 3 -->
+      <div class="card anim-in d5" style="grid-column: span 1;">
+        <div style="display:flex; gap: 18px; align-items: flex-start;">
+          <div class="num-badge">3</div>
+          <div style="flex:1;">
+            <h4>האצת חדשנות ויישום טכנולוגיות מתקדמות</h4>
+            <p style="margin-bottom: 12px;">קידום מחקר יישומי, ניסויים, סימולציות ובדיקות לטכנולוגיות חדשות בתחומי:</p>
+            <div style="display:flex; flex-wrap:wrap; gap: 8px;">
+              <span class="tech-pill"><em class="tag">AI</em></span>
+              <span class="tech-pill"><em class="tag">OT / ICS</em></span>
+              <span class="tech-pill"><em class="tag">Cloud</em></span>
+              <span class="tech-pill"><em class="tag">Cyber Defense</em></span>
+              <span class="tech-pill"><em class="tag">Deepfake</em></span>
+              <span class="tech-pill"><em class="tag">Forensics</em></span>
+              <span class="tech-pill"><em class="tag">Threat Intelligence</em></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 4 -->
+      <div class="card anim-in d6">
+        <div style="display:flex; gap: 18px; align-items: flex-start;">
+          <div class="num-badge">4</div>
+          <div style="flex:1;">
+            <h4>שילוב <em class="tag" style="font-size:0.95em;">AI</em> וטכנולוגיות מתקדמות בכלל תחומי הסייבר</h4>
+            <p style="margin-bottom: 10px;">הטמעת יכולות <em class="tag">AI</em> וטכנולוגיות מתקדמות באופן אינטגרלי בכלל המעבדות, המערכים והפעילויות של המרכז, לצורך שיפור:</p>
+            <div style="display:flex; flex-wrap:wrap; gap: 8px;">
+              <span class="tech-pill cy">ההגנה</span>
+              <span class="tech-pill cy">הזיהוי</span>
+              <span class="tech-pill cy">החיזוי</span>
+              <span class="tech-pill cy">הסימולציה</span>
+              <span class="tech-pill cy">והלמידה המבצעית</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .tech-pill {
+          display: inline-block;
+          padding: 6px 12px;
+          background: rgba(0,224,255,0.08);
+          border: 1px solid rgba(0,224,255,0.3);
+          border-radius: 8px;
+          color: var(--cyan);
+          font-family:'Heebo'; font-weight: 600; font-size: 16px;
+        }
+        .tech-pill.cy { color: var(--ink); }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">GOALS // 1—4</span><span>NEXT // 5—7</span></span>
+    <span>07 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 08 — Goals 5-7
+     ============================================ -->
+<section data-screen-label="08 Goals 5-7">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // GOALS</span></div>
+    <div class="right"><span class="dot"></span><span>08 — GOALS 5—7</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div style="display:flex; justify-content:space-between; align-items: flex-end;">
+      <div>
+        <div class="h-eyebrow anim-in">// 03 — מטרות</div>
+        <h2 class="h-big anim-in d1">
+          מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+        </h2>
+        <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">מטרות המרכז</h3>
+      </div>
+      <div class="anim-in d3" style="font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.3em; color: var(--ink-faint);">
+        PART <span class="accent" style="font-weight:700;">2/2</span>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 32px; flex: 1;">
+      <!-- Goal 5 -->
+      <div class="card anim-in d3">
+        <div class="num-badge" style="margin-bottom: 16px;">5</div>
+        <h4>פיתוח ההון האנושי הלאומי</h4>
+        <p style="margin-bottom: 14px;">הכשרת אנשי מקצוע, מנהלים ומקבלי החלטות באמצעות:</p>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap: 8px;">
+          <li class="bullet-row"><span class="b-dot"></span>קורסים</li>
+          <li class="bullet-row"><span class="b-dot"></span>תרגילים</li>
+          <li class="bullet-row"><span class="b-dot"></span>אימונים</li>
+          <li class="bullet-row"><span class="b-dot"></span>סימולציות</li>
+          <li class="bullet-row"><span class="b-dot"></span>שולחנות עגולים</li>
+          <li class="bullet-row"><span class="b-dot"></span>והכשרות מתקדמות</li>
+        </ul>
+      </div>
+
+      <!-- Goal 6 -->
+      <div class="card anim-in d4">
+        <div class="num-badge" style="margin-bottom: 16px;">6</div>
+        <h4>יצירת יכולות אינטגרטיביות לאומיות</h4>
+        <p style="margin-bottom: 14px;">חיבור בין:</p>
+        <div style="display:flex; flex-direction:column; gap: 10px;">
+          <div style="padding: 10px 12px; background: rgba(0,224,255,0.08); border-right: 2px solid var(--cyan); border-radius: 6px; font-size: 16px; color: var(--ink); font-weight: 600;">ממשלה, תעשיה, משק ואקדמיה</div>
+          <div style="padding: 10px 12px; background: rgba(255,52,122,0.08); border-right: 2px solid var(--magenta); border-radius: 6px; font-size: 16px; color: var(--ink); font-weight: 600;">גופים ביטחון, גופי מודיעין וגופי תוה"ד</div>
+          <div style="padding: 10px 12px; background: rgba(255,181,71,0.08); border-right: 2px solid var(--amber); border-radius: 6px; font-size: 16px; color: var(--ink); font-weight: 600;">תשתיות קריטיות, תשתיות חיוניות ורגולציה</div>
+        </div>
+        <p style="margin-top: 14px;">לטובת שיתוף ידע, הפקת לקחים ותיאום לאומי.</p>
+      </div>
+
+      <!-- Goal 7 -->
+      <div class="card anim-in d5">
+        <div class="num-badge" style="margin-bottom: 16px;">7</div>
+        <h4>חיזוק מעמדה הבינלאומי של ישראל</h4>
+        <p style="margin-bottom: 14px;">מיצוב מדינת ישראל כמעצמה ומובילה עולמית בתחומי:</p>
+        <div style="display:flex; flex-direction:column; gap: 10px;">
+          <div class="leader-row"><span class="lr-num">01</span><em class="tag" style="font-size: 18px; font-weight: 700;">Cyber Innovation</em></div>
+          <div class="leader-row"><span class="lr-num">02</span><em class="tag" style="font-size: 18px; font-weight: 700;">AI Cyber</em></div>
+          <div class="leader-row"><span class="lr-num">03</span><em class="tag" style="font-size: 18px; font-weight: 700;">National Cyber Resilience</em></div>
+          <div class="leader-row"><span class="lr-num">04</span><em class="tag" style="font-size: 16px; font-weight: 700;">Cyber Training &amp; Simulation</em></div>
+        </div>
+      </div>
+      <style>
+        .bullet-row {
+          display: flex; align-items: center; gap: 10px;
+          font-family: 'Heebo'; font-weight: 500; font-size: 16px; color: var(--ink);
+        }
+        .b-dot {
+          width: 8px; height: 8px;
+          background: var(--cyan);
+          box-shadow: 0 0 8px var(--cyan-glow);
+          border-radius: 2px;
+          transform: rotate(45deg);
+        }
+        .leader-row {
+          display: flex; align-items: center; gap: 12px;
+          padding: 10px 12px;
+          background: linear-gradient(90deg, rgba(0,224,255,0.06), transparent);
+          border-bottom: 1px solid var(--line);
+        }
+        .lr-num {
+          font-family:'JetBrains Mono'; font-weight:700; font-size: 16px; color: var(--magenta);
+          letter-spacing: 0.1em;
+        }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">GOALS // 5—7</span><span>HUMAN CAPITAL • INTEGRATION • LEADERSHIP</span></span>
+    <span>08 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 09 — Targets 1-2 (Strategic + Professional)
+     ============================================ -->
+<section data-screen-label="09 Targets 1-2">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // TARGETS</span></div>
+    <div class="right"><span class="dot"></span><span>09 — TARGETS 1—2</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 04 — יעדים</div>
+    <h2 class="h-big anim-in d1">
+      מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">יעדי המרכז</h3>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; flex: 1;">
+      <!-- 1 Strategic -->
+      <div class="anim-in d3">
+        <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 18px;">
+          <div style="font-family:'Rubik'; font-weight:900; font-size: 64px; line-height: 1; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">1</div>
+          <h3 class="h-med" style="font-size: 30px;">יעדים <span class="accent">אסטרטגיים</span></h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 14px;">
+          <div class="target-card">
+            <div class="tc-h">הקמת מרכז לאומי אחוד</div>
+            <div class="tc-d">הקמת תשתית פיזית ווירטואלית שתשרת את כלל המשק הישראלי.</div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h">יצירת מנוע <em class="tag">AI</em> וטכנולוגיות מתקדמות לאומי</div>
+            <div class="tc-d">פיתוח יכולות <em class="tag">AI</em> וטכנולוגיות רוחביות לטובת:</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 6px; margin-top: 8px;">
+              <span class="mini-chip">הגנת סייבר</span>
+              <span class="mini-chip">סימולציות</span>
+              <span class="mini-chip">תרגול</span>
+              <span class="mini-chip">מודיעין</span>
+              <span class="mini-chip">וניתוח איומים</span>
+            </div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h">חיבור כלל הגופים הלאומיים</div>
+            <div class="tc-d">יצירת שיתופי פעולה ותהליכי עבודה משותפים בין כלל הגופים המשמעותיים במשק.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Professional -->
+      <div class="anim-in d5">
+        <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 18px;">
+          <div style="font-family:'Rubik'; font-weight:900; font-size: 64px; line-height: 1; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">2</div>
+          <h3 class="h-med" style="font-size: 30px;">יעדים <span class="accent-mag">מקצועיים</span></h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 14px;">
+          <div class="target-card">
+            <div class="tc-h"><em class="tag">Testing &amp; Validation</em></div>
+            <div class="tc-d">בדיקות ולידציה לטכנולוגיות חדשות לפני הטמעה במשק.</div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h"><em class="tag">Cyber Range</em> לאומי</div>
+            <div class="tc-d">בניית סביבת תרגול וסימולציה מתקדמת עבור:</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 6px; margin-top: 8px;">
+              <span class="mini-chip">תשתיות קריטיות</span>
+              <span class="mini-chip">גופי ממשלה</span>
+              <span class="mini-chip">וגופים חיוניים</span>
+            </div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h">מרכז פוראנזיקה ולמידה</div>
+            <div class="tc-d">יצירת יכולת לאומית להפקת לקחים, חקר אירועים ושיפור מתמיד.</div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h">מרכז ידע ומודעות</div>
+            <div class="tc-d">הפצת:</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 6px; margin-top: 8px;">
+              <span class="mini-chip">מידעונים</span>
+              <span class="mini-chip">סקירות טכנולוגיות</span>
+              <span class="mini-chip"><em class="tag">Threat Intelligence</em></span>
+              <span class="mini-chip"><em class="tag">Best Practices</em></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .target-card {
+          padding: 14px 18px;
+          background: linear-gradient(90deg, rgba(20,30,70,0.4), rgba(8,12,30,0.2));
+          border-right: 3px solid var(--cyan);
+          border-radius: 10px;
+        }
+        .target-card .tc-h {
+          font-family:'Heebo'; font-weight:700; font-size: 18px; color: var(--ink);
+          margin-bottom: 4px;
+        }
+        .target-card .tc-d {
+          font-family:'Heebo'; font-weight:400; font-size: 16px; color: var(--ink-dim);
+          line-height: 1.5;
+        }
+        .mini-chip {
+          padding: 4px 10px;
+          background: rgba(8,12,30,0.6);
+          border: 1px solid var(--line-strong);
+          border-radius: 6px;
+          font-family:'Heebo'; font-weight:500; font-size: 16px;
+          color: var(--ink);
+        }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">STRATEGIC</span><span class="live">PROFESSIONAL</span></span>
+    <span>09 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 10 — Targets 3-4 (Education + Operational)
+     ============================================ -->
+<section data-screen-label="10 Targets 3-4">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // TARGETS</span></div>
+    <div class="right"><span class="dot"></span><span>10 — TARGETS 3—4</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 04 — יעדים</div>
+    <h2 class="h-big anim-in d1">
+      מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">יעדי המרכז</h3>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; flex: 1;">
+      <!-- 3 Education -->
+      <div class="anim-in d3">
+        <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 18px;">
+          <div style="font-family:'Rubik'; font-weight:900; font-size: 64px; line-height: 1; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">3</div>
+          <h3 class="h-med" style="font-size: 28px;">יעדי <span class="accent">חינוך והכשרה</span></h3>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 14px;">
+          <div class="target-card">
+            <div class="tc-h">הכשרת הון אנושי</div>
+            <div class="tc-d">הכשרת:</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 6px; margin-top: 8px;">
+              <span class="mini-chip">מומחי סייבר</span>
+              <span class="mini-chip">אנשי <em class="tag">OT</em></span>
+              <span class="mini-chip">מנהלים</span>
+              <span class="mini-chip">מקבלי החלטות</span>
+              <span class="mini-chip">צוותי חירום</span>
+              <span class="mini-chip">וגופי תפעול</span>
+            </div>
+          </div>
+          <div class="target-card">
+            <div class="tc-h">תרגילים ואימונים</div>
+            <div class="tc-d">ביצוע:</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 6px; margin-top: 8px;">
+              <span class="mini-chip">תרגילים לאומיים</span>
+              <span class="mini-chip">סימולציות מגזריות</span>
+              <span class="mini-chip">אימוני הנהלה</span>
+              <span class="mini-chip">תרחישי משבר</span>
+              <span class="mini-chip">ימי כשירות לארגונים מונחים</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Operational -->
+      <div class="anim-in d5">
+        <div style="display:flex; align-items:center; gap: 14px; margin-bottom: 18px;">
+          <div style="font-family:'Rubik'; font-weight:900; font-size: 64px; line-height: 1; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent;">4</div>
+          <h3 class="h-med" style="font-size: 28px;">יעדים <span class="accent-mag">תפעוליים</span></h3>
+        </div>
+
+        <!-- Three stat blocks -->
+        <div style="display:flex; flex-direction:column; gap: 16px;">
+          <div class="op-block">
+            <div class="op-left">
+              <div class="op-num">↑</div>
+            </div>
+            <div>
+              <div class="tc-h">שיפור מוכנות המשק</div>
+              <div class="tc-d">הגדלת רמת המוכנות של גופים קריטיים וגופים חיוניים לאירועי סייבר.</div>
+            </div>
+          </div>
+          <div class="op-block">
+            <div class="op-left">
+              <div class="op-num">⟲</div>
+            </div>
+            <div>
+              <div class="tc-h">שיפור הרציפות התפקודית</div>
+              <div class="tc-d">קיצור זמני תגובה והתאוששות מאירועים.</div>
+            </div>
+          </div>
+          <div class="op-block">
+            <div class="op-left">
+              <div class="op-num">⇄</div>
+            </div>
+            <div>
+              <div class="tc-h">שיפור שיתוף הידע</div>
+              <div class="tc-d">יצירת מנגנון לאומי ללמידה והפקת לקחים.</div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .op-block {
+            display: flex; gap: 16px; align-items: center;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, rgba(0,224,255,0.06), rgba(255,52,122,0.04));
+            border: 1px solid var(--line-strong);
+            border-radius: 12px;
+          }
+          .op-left {
+            width: 52px; height: 52px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, var(--cyan), var(--blue-bright));
+            color: var(--bg-0);
+            border-radius: 12px;
+            flex-shrink: 0;
+          }
+          .op-num {
+            font-family:'JetBrains Mono'; font-weight: 800; font-size: 28px;
+          }
+        </style>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">EDUCATION</span><span class="live">OPERATIONAL</span></span>
+    <span>10 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 11 — Target Audiences
+     ============================================ -->
+<section data-screen-label="11 Target Audiences">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // AUDIENCES</span></div>
+    <div class="right"><span class="dot"></span><span>11 — AUDIENCES</span></div>
+  </div>
+
+  <div class="slide-pad" style="inset: 56px 80px 56px 80px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div>
+        <div class="h-eyebrow anim-in">// 05 — קהלי יעד</div>
+        <h2 class="h-big anim-in d1" style="font-size: 48px;">
+          מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+        </h2>
+        <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta); font-size: 28px;">קהלי היעד המרכזיים</h3>
+      </div>
+      <div class="anim-in d3" style="text-align: left; padding: 14px 20px; border: 1px solid var(--cyan); border-radius: 12px; background: rgba(0,224,255,0.06);">
+        <div class="card-tag">// WORLD FIRST</div>
+        <div style="font-family:'Rubik'; font-weight:800; font-size: 19px; color: var(--cyan); line-height:1.3;">אין כיום בעולם <br>מרכז חדשנות לסייבר כזה!</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; flex: 1;">
+      <!-- Critical infra -->
+      <div class="card anim-in d3" style="padding: 20px;">
+        <div class="card-tag" style="color: var(--magenta);">// 01</div>
+        <h4 style="font-size: 19px;">תשתיות קריטיות</h4>
+        <div style="display:flex; flex-direction:column; gap: 6px; margin-top: 10px;">
+          <div class="audience-row">חשמל</div>
+          <div class="audience-row">מים</div>
+          <div class="audience-row">אנרגיה</div>
+          <div class="audience-row">תחבורה</div>
+          <div class="audience-row">תקשורת</div>
+        </div>
+      </div>
+
+      <!-- Essential bodies -->
+      <div class="card anim-in d3" style="padding: 20px;">
+        <div class="card-tag" style="color: var(--cyan);">// 02</div>
+        <h4 style="font-size: 19px;">גופים חיוניים</h4>
+        <div style="display:flex; flex-direction:column; gap: 6px; margin-top: 10px;">
+          <div class="audience-row">בריאות</div>
+          <div class="audience-row">פיננסים</div>
+          <div class="audience-row">רשויות מקומיות</div>
+          <div class="audience-row">גופי חירום והצלה</div>
+        </div>
+      </div>
+
+      <!-- Government & Defense -->
+      <div class="card anim-in d4" style="padding: 20px; grid-row: span 2;">
+        <div class="card-tag" style="color: var(--magenta);">// 03</div>
+        <h4 style="font-size: 19px;">גופים ממשלתיים וביטחוניים</h4>
+        <div style="display:flex; flex-direction:column; gap: 6px; margin-top: 10px;">
+          <div class="audience-row">מערך הסייבר</div>
+          <div class="audience-row">צה"ל</div>
+          <div class="audience-row">שב"כ</div>
+          <div class="audience-row">מוסד</div>
+          <div class="audience-row">משטרת ישראל</div>
+          <div class="audience-row">מפא"ת</div>
+          <div class="audience-row">תעשיות ביטחוניות</div>
+          <div class="audience-row">מטה ה‑<em class="tag">AI</em></div>
+          <div class="audience-row">משרדים רלוונטיים: הג"ס, תחבורה, אנרגיה ועוד</div>
+        </div>
+      </div>
+
+      <!-- Industry -->
+      <div class="card anim-in d5" style="padding: 20px; grid-column: span 2;">
+        <div class="card-tag" style="color: var(--cyan);">// 04</div>
+        <h4 style="font-size: 19px;">תעשיה</h4>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px;">
+          <div class="audience-row">יצרני פתרונות סייבר מקומיים ובינלאומיים</div>
+          <div class="audience-row">חברות הזנק לפתרונות סייבר</div>
+          <div class="audience-row">יצרני פתרונות <em class="tag">OTOT / IOT / II</em> ועוד מקומיים ובינלאומיים</div>
+          <div class="audience-row">חברות הזנק לפתרונות <em class="tag">OTOT / IOT / II</em></div>
+          <div class="audience-row" style="grid-column: span 2;">ארגונים רלוונטיים במשק</div>
+        </div>
+      </div>
+
+      <!-- Academia -->
+      <div class="card anim-in d6" style="padding: 20px;">
+        <div class="card-tag" style="color: var(--magenta);">// 05</div>
+        <h4 style="font-size: 19px;">גופי מחקר ואקדמיה</h4>
+        <div style="display:flex; flex-direction:column; gap: 6px; margin-top: 10px;">
+          <div class="audience-row">אוניברסיטאות בארץ ובעולם</div>
+          <div class="audience-row">גופי מחקר</div>
+          <div class="audience-row">מכללות</div>
+        </div>
+      </div>
+
+      <!-- Other -->
+      <div class="card anim-in d7" style="padding: 20px; grid-column: span 2;">
+        <div class="card-tag" style="color: var(--cyan);">// 06</div>
+        <h4 style="font-size: 19px;">יתר גופים</h4>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px;">
+          <div class="audience-row">קש"ח</div>
+          <div class="audience-row">מעבדות סייבר בארץ ובעולם</div>
+          <div class="audience-row">גופי רגולציה והסמכה</div>
+          <div class="audience-row">גופי הדרכה ואימון</div>
+        </div>
+      </div>
+
+      <style>
+        .audience-row {
+          padding: 8px 12px;
+          background: rgba(8, 12, 30, 0.5);
+          border-right: 2px solid var(--line-strong);
+          border-radius: 6px;
+          font-family:'Heebo'; font-weight: 500; font-size: 16px;
+          color: var(--ink);
+        }
+        .card-tag { font-size: 16px !important; }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">SECTORS // 6</span><span>UNIQUE GLOBALLY</span></span>
+    <span>11 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 12 — Benefits (4 quadrants)
+     ============================================ -->
+<section data-screen-label="12 Benefits">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // BENEFITS</span></div>
+    <div class="right"><span class="dot"></span><span>12 — INVESTMENT VALUE</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 06 — תועלות</div>
+    <h2 class="h-big anim-in d1">
+      תועלות ויתרונות <span class="accent">ההשקעה</span>
+    </h2>
+    <p class="body-lg anim-in d2" style="margin-top: 8px; color: var(--ink);">
+      <span class="accent-mag" style="font-weight:700;">מדוע ההשקעה הזו קריטית דווקא עכשיו?</span>
+    </p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; flex: 1;">
+      <!-- National -->
+      <div class="card anim-in d3" style="padding: 26px;">
+        <div style="display:flex; align-items:center; gap: 14px;">
+          <div style="width:48px; height:48px; background: linear-gradient(135deg, var(--cyan), var(--blue-bright)); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--bg-0); font-family:'Rubik'; font-weight:900; font-size: 22px;">N</div>
+          <h4 style="font-size: 24px; margin: 0;">יתרונות לאומיים</h4>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 18px;">
+          <div class="benefit-row"><span class="bn-arrow"></span>שיפור החוסן הלאומי</div>
+          <div class="benefit-row"><span class="bn-arrow"></span>הגנה על הרציפות התפקודית</div>
+          <div class="benefit-row"><span class="bn-arrow"></span>מוכנות טובה יותר למשברים</div>
+          <div class="benefit-row"><span class="bn-arrow"></span>חיבור בין כלל הגופים ( ממשלה, תעשיה, משק, אקדמיה, וקש"ח )</div>
+        </div>
+      </div>
+
+      <!-- Technological -->
+      <div class="card anim-in d4" style="padding: 26px;">
+        <div style="display:flex; align-items:center; gap: 14px;">
+          <div style="width:48px; height:48px; background: linear-gradient(135deg, var(--magenta), #c91855); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: white; font-family:'Rubik'; font-weight:900; font-size: 22px;">T</div>
+          <h4 style="font-size: 24px; margin: 0;">יתרונות טכנולוגיים</h4>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 18px;">
+          <div class="benefit-row"><span class="bn-arrow mag"></span>האצת חדשנות ו‑<em class="tag">AI</em></div>
+          <div class="benefit-row"><span class="bn-arrow mag"></span>בדיקות טכנולוגיות לפני הטמעה</div>
+          <div class="benefit-row"><span class="bn-arrow mag"></span>יצירת <em class="tag">Best Practices</em> לאומיים והתאמה של הרגולציות</div>
+          <div class="benefit-row"><span class="bn-arrow mag"></span>יצירת עליונות טכנולוגית שתתורגם ליכולות הגנה ושמירה על הרציפות</div>
+        </div>
+      </div>
+
+      <!-- Economic -->
+      <div class="card anim-in d5" style="padding: 26px;">
+        <div style="display:flex; align-items:center; gap: 14px;">
+          <div style="width:48px; height:48px; background: linear-gradient(135deg, var(--green), #1ba87a); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--bg-0); font-family:'Rubik'; font-weight:900; font-size: 22px;">₪</div>
+          <h4 style="font-size: 24px; margin: 0;">יתרונות כלכליים</h4>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 18px;">
+          <div class="benefit-row"><span class="bn-arrow green"></span>צמצום סיכונים למשק</div>
+          <div class="benefit-row"><span class="bn-arrow green"></span>חיסכון, יעילות והתייעלות</div>
+          <div class="benefit-row"><span class="bn-arrow green"></span>מניעת נזקים משמעותיים</div>
+        </div>
+      </div>
+
+      <!-- Strategic -->
+      <div class="card anim-in d6" style="padding: 26px;">
+        <div style="display:flex; align-items:center; gap: 14px;">
+          <div style="width:48px; height:48px; background: linear-gradient(135deg, var(--amber), #d48d20); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--bg-0); font-family:'Rubik'; font-weight:900; font-size: 22px;">★</div>
+          <h4 style="font-size: 24px; margin: 0;">יתרונות אסטרטגיים</h4>
+        </div>
+        <div style="display:flex; flex-direction:column; gap: 10px; margin-top: 18px;">
+          <div class="benefit-row"><span class="bn-arrow amber"></span>מיצוב ישראל כמעצמה ומובילה עולמית</div>
+          <div class="benefit-row"><span class="bn-arrow amber"></span>יצירת יתרון טכנולוגי וביטחוני</div>
+          <div class="benefit-row"><span class="bn-arrow amber"></span>חיזוק תעשיית הסייבר הישראלית</div>
+        </div>
+      </div>
+      <style>
+        .benefit-row {
+          display:flex; align-items: flex-start; gap: 12px;
+          font-family:'Heebo'; font-weight: 500; font-size: 17px;
+          color: var(--ink); line-height: 1.4;
+        }
+        .bn-arrow {
+          width: 14px; height: 14px;
+          flex-shrink: 0; margin-top: 4px;
+          background: var(--cyan);
+          clip-path: polygon(100% 50%, 30% 0%, 30% 35%, 0% 35%, 0% 65%, 30% 65%, 30% 100%);
+          box-shadow: 0 0 8px var(--cyan-glow);
+        }
+        .bn-arrow.mag { background: var(--magenta); box-shadow: 0 0 8px var(--magenta-glow); }
+        .bn-arrow.green { background: var(--green); }
+        .bn-arrow.amber { background: var(--amber); }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">N • T • ₪ • ★</span><span>4 PILLARS</span></span>
+    <span>12 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 13 — Hybrid Operating Model
+     ============================================ -->
+<section data-screen-label="13 Hybrid Model">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // OPERATING MODEL</span></div>
+    <div class="right"><span class="dot"></span><span>13 — HYBRID</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 07 — מודל הפעלה</div>
+    <h2 class="h-big anim-in d1">
+      מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">מודל הפעלה היברידי</h3>
+
+    <div style="display:grid; grid-template-columns: 1fr 80px 1fr; gap: 0; margin-top: 38px; flex: 1; align-items: stretch;">
+      <!-- Physical -->
+      <div class="anim-in d3" style="border: 1px solid var(--cyan); border-radius: 20px; padding: 36px; background: linear-gradient(180deg, rgba(0,224,255,0.08), rgba(33,64,153,0.04)); position: relative; overflow:hidden;">
+        <div style="position:absolute; top:-30px; right:-30px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0,224,255,0.2), transparent 70%); filter: blur(40px);"></div>
+
+        <div class="card-tag" style="color: var(--cyan);">// PHYSICAL</div>
+        <h3 class="h-med" style="margin-top: 6px;">רכיב <span class="accent">פיזי</span></h3>
+
+        <div style="display:flex; flex-direction:column; gap: 18px; margin-top: 32px;">
+          <div class="model-row">
+            <div class="model-glyph">
+              <svg viewBox="0 0 40 40" width="40" height="40"><rect x="4" y="14" width="32" height="22" rx="2" fill="none" stroke="#00e0ff" stroke-width="1.5"/><rect x="8" y="18" width="6" height="6" fill="#00e0ff" opacity="0.4"/><rect x="17" y="18" width="6" height="6" fill="#00e0ff" opacity="0.4"/><rect x="26" y="18" width="6" height="6" fill="#00e0ff" opacity="0.4"/><path d="M14 14V8h12v6" fill="none" stroke="#00e0ff" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <div class="m-h">מעבדות בבאר שבע ובתל אביב</div>
+            </div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph">
+              <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="14" fill="none" stroke="#00e0ff" stroke-width="1.5"/><circle cx="20" cy="20" r="6" fill="#00e0ff" opacity="0.4"/><line x1="20" y1="6" x2="20" y2="34" stroke="#00e0ff" stroke-width="1"/><line x1="6" y1="20" x2="34" y2="20" stroke="#00e0ff" stroke-width="1"/></svg>
+            </div>
+            <div><div class="m-h"><em class="tag">Cyber Range</em></div></div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph">
+              <svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="10" width="28" height="20" rx="2" fill="none" stroke="#00e0ff" stroke-width="1.5"/><circle cx="14" cy="20" r="3" fill="#00e0ff"/><circle cx="26" cy="20" r="3" fill="#ff347a"/><line x1="14" y1="34" x2="26" y2="34" stroke="#00e0ff" stroke-width="1.5"/></svg>
+            </div>
+            <div><div class="m-h">חדרי סימולציה</div></div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph">
+              <svg viewBox="0 0 40 40" width="40" height="40"><path d="M8 32L8 8L32 8L32 32M8 32L18 22M32 32L22 22M8 8L32 32" fill="none" stroke="#00e0ff" stroke-width="1.5"/></svg>
+            </div>
+            <div><div class="m-h"><em class="tag">OT / ICS / IOT / IIOT</em> ועוד</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- + Connector -->
+      <div class="anim-fade d4" style="display:flex; align-items:center; justify-content:center; flex-direction: column;">
+        <div style="width:60px; height:60px; border-radius:50%; border:2px solid var(--magenta); display:flex; align-items:center; justify-content:center; font-family:'Rubik'; font-weight:900; font-size: 32px; color: var(--magenta); background: var(--bg-0); box-shadow: 0 0 32px var(--magenta-glow);">+</div>
+      </div>
+
+      <!-- Virtual -->
+      <div class="anim-in d5" style="border: 1px solid var(--magenta); border-radius: 20px; padding: 36px; background: linear-gradient(180deg, rgba(255,52,122,0.08), rgba(20,30,70,0.04)); position: relative; overflow:hidden;">
+        <div style="position:absolute; bottom:-30px; left:-30px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,52,122,0.2), transparent 70%); filter: blur(40px);"></div>
+
+        <div class="card-tag" style="color: var(--magenta);">// VIRTUAL</div>
+        <h3 class="h-med" style="margin-top: 6px;">רכיב <span class="accent-mag">וירטואלי</span></h3>
+
+        <div style="display:flex; flex-direction:column; gap: 18px; margin-top: 32px;">
+          <div class="model-row">
+            <div class="model-glyph mag">
+              <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="14" fill="none" stroke="#ff347a" stroke-width="1.5"/><path d="M14 20L18 24L26 16" stroke="#ff347a" stroke-width="1.5" fill="none"/></svg>
+            </div>
+            <div><div class="m-h">תרגול מרחוק</div></div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph mag">
+              <svg viewBox="0 0 40 40" width="40" height="40"><path d="M28 22c2 0 4-2 4-4s-2-4-4-4c-1-3-4-5-7-5s-6 2-7 5c-3 0-5 2-5 5s2 5 5 5h14z" fill="none" stroke="#ff347a" stroke-width="1.5"/><circle cx="20" cy="28" r="2" fill="#ff347a"/></svg>
+            </div>
+            <div><div class="m-h">ענן מאובטח</div></div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph mag">
+              <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="3" fill="#ff347a"/><circle cx="10" cy="12" r="2.5" fill="none" stroke="#ff347a" stroke-width="1.5"/><circle cx="30" cy="12" r="2.5" fill="none" stroke="#ff347a" stroke-width="1.5"/><circle cx="10" cy="28" r="2.5" fill="none" stroke="#ff347a" stroke-width="1.5"/><circle cx="30" cy="28" r="2.5" fill="none" stroke="#ff347a" stroke-width="1.5"/><line x1="20" y1="20" x2="10" y2="12" stroke="#ff347a" stroke-width="1"/><line x1="20" y1="20" x2="30" y2="12" stroke="#ff347a" stroke-width="1"/><line x1="20" y1="20" x2="10" y2="28" stroke="#ff347a" stroke-width="1"/><line x1="20" y1="20" x2="30" y2="28" stroke="#ff347a" stroke-width="1"/></svg>
+            </div>
+            <div><div class="m-h">שיתוף ידע</div></div>
+          </div>
+          <div class="model-row">
+            <div class="model-glyph mag">
+              <svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="6" width="28" height="28" rx="2" fill="none" stroke="#ff347a" stroke-width="1.5"/><path d="M12 22L16 18L20 22L24 16L28 20" fill="none" stroke="#ff347a" stroke-width="1.5"/></svg>
+            </div>
+            <div><div class="m-h">סימולציות לאומיות</div></div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .model-row {
+          display: flex; gap: 18px; align-items: center;
+          padding: 12px 16px;
+          background: rgba(8, 12, 30, 0.5);
+          border-radius: 12px;
+          border: 1px solid var(--line);
+        }
+        .model-glyph {
+          width: 48px; height: 48px;
+          background: rgba(0,224,255,0.1);
+          border-radius: 10px;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink: 0;
+        }
+        .model-glyph.mag { background: rgba(255,52,122,0.1); }
+        .m-h { font-family:'Heebo'; font-weight:700; font-size: 20px; color: var(--ink); }
+      </style>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">PHYSICAL</span><span class="hot">VIRTUAL</span><span>= HYBRID</span></span>
+    <span>13 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 14 — Phases (Timeline)
+     ============================================ -->
+<section data-screen-label="14 Phases">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // ROADMAP</span></div>
+    <div class="right"><span class="dot"></span><span>14 — PHASES</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div class="h-eyebrow anim-in">// 08 — שלבי הקמה</div>
+    <h2 class="h-big anim-in d1">
+      מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+    </h2>
+    <h3 class="h-med anim-in d2" style="margin-top: 6px; color: var(--magenta);">שלבים בהקמה ותפעול המרכז</h3>
+
+    <!-- Timeline -->
+    <div style="margin-top: 38px; position: relative; flex: 1; display: flex; flex-direction: column;">
+      <!-- Timeline track -->
+      <div style="position: absolute; top: 56px; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue-bright), var(--magenta));"></div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; position: relative;">
+        <!-- Phase 1 -->
+        <div class="anim-in d3" style="position: relative;">
+          <div style="display:flex; align-items:center; gap: 12px;">
+            <div class="phase-dot" style="background: var(--cyan); box-shadow: 0 0 20px var(--cyan-glow);"></div>
+            <div style="font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.2em; color: var(--cyan);">PHASE 01</div>
+          </div>
+          <div style="margin-top: 28px; padding: 24px; border: 1px solid rgba(0,224,255,0.3); border-radius: 14px; background: linear-gradient(180deg, rgba(0,224,255,0.06), transparent);">
+            <div style="display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="font-family:'Rubik'; font-weight:900; font-size: 26px; color: var(--ink);">שלב 1</span>
+              <span style="font-family:'Rubik'; font-weight:800; font-size: 22px; color: var(--cyan);">— <em class="tag" style="font-size: 22px;">Foundation</em></span>
+            </div>
+            <div style="margin-top: 6px; font-family:'Heebo'; font-weight:600; font-size: 16px; color: var(--ink-dim);">(6 חודשים)</div>
+            <div style="margin-top: 20px; display:flex; flex-direction: column; gap: 10px;">
+              <div class="phase-item">הקמת ליבת המרכז</div>
+              <div class="phase-item"><em class="tag">AI Core</em></div>
+              <div class="phase-item"><em class="tag">Cyber Range</em></div>
+              <div class="phase-item">חיבור גופים ראשונים ( <em class="tag">CYBER AI LAB</em>, מעבדות קיימות )</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="anim-in d5" style="position: relative;">
+          <div style="display:flex; align-items:center; gap: 12px;">
+            <div class="phase-dot" style="background: var(--blue-bright); box-shadow: 0 0 20px rgba(54,88,212,0.5);"></div>
+            <div style="font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.2em; color: var(--blue-bright);">PHASE 02</div>
+          </div>
+          <div style="margin-top: 28px; padding: 24px; border: 1px solid rgba(54,88,212,0.4); border-radius: 14px; background: linear-gradient(180deg, rgba(54,88,212,0.08), transparent);">
+            <div style="display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="font-family:'Rubik'; font-weight:900; font-size: 26px; color: var(--ink);">שלב 2</span>
+              <span style="font-family:'Rubik'; font-weight:800; font-size: 22px; color: var(--blue-bright);">— <em class="tag" style="font-size: 22px; color: var(--blue-bright);">Scale</em></span>
+            </div>
+            <div style="margin-top: 6px; font-family:'Heebo'; font-weight:600; font-size: 16px; color: var(--ink-dim);">(6 חודשים)</div>
+            <div style="margin-top: 20px; display:flex; flex-direction: column; gap: 10px;">
+              <div class="phase-item">הרחבת מעבדות</div>
+              <div class="phase-item">הרחבת הכשרות</div>
+              <div class="phase-item">הרחבת סימולציות</div>
+              <div class="phase-item"><em class="tag">AI</em> וטכנולוגיות מתקמות</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="anim-in d7" style="position: relative;">
+          <div style="display:flex; align-items:center; gap: 12px;">
+            <div class="phase-dot" style="background: var(--magenta); box-shadow: 0 0 20px var(--magenta-glow);"></div>
+            <div style="font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.2em; color: var(--magenta);">PHASE 03</div>
+          </div>
+          <div style="margin-top: 28px; padding: 24px; border: 1px solid rgba(255,52,122,0.4); border-radius: 14px; background: linear-gradient(180deg, rgba(255,52,122,0.08), transparent);">
+            <div style="display:flex; align-items:baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="font-family:'Rubik'; font-weight:900; font-size: 26px; color: var(--ink);">שלב 3</span>
+              <span style="font-family:'Rubik'; font-weight:800; font-size: 18px; color: var(--magenta);">— <em class="tag" style="font-size: 18px; color: var(--magenta);">National Leadership</em></span>
+            </div>
+            <div style="margin-top: 6px; font-family:'Heebo'; font-weight:600; font-size: 16px; color: var(--ink-dim);">(לאחר 12 חודשים)</div>
+            <div style="margin-top: 20px; display:flex; flex-direction: column; gap: 10px;">
+              <div class="phase-item"><em class="tag">Hub</em> לאומי מלא</div>
+              <div class="phase-item">שיתופי פעולה בינלאומיים</div>
+              <div class="phase-item">מרכז <em class="tag">AI Cyber</em> וטכנולוגיות מתקדמות מוביל בעולם</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .phase-dot {
+          width: 18px; height: 18px;
+          border-radius: 50%;
+          position: relative;
+          z-index: 2;
+        }
+        .phase-dot::after {
+          content:''; position: absolute; inset: -6px;
+          border: 1px solid currentColor;
+          border-radius: 50%;
+          opacity: 0.5;
+        }
+        .phase-item {
+          padding: 10px 14px;
+          background: rgba(8, 12, 30, 0.6);
+          border-right: 2px solid var(--cyan);
+          border-radius: 6px;
+          font-family:'Heebo'; font-weight: 500; font-size: 16px;
+          color: var(--ink);
+        }
+      </style>
+
+      <div class="anim-in d9" style="margin-top: 32px; padding: 22px 28px; border: 1px solid var(--cyan); border-radius: 14px; background: linear-gradient(90deg, rgba(0,224,255,0.06), rgba(255,52,122,0.06)); text-align: center;">
+        <div style="font-family:'Rubik'; font-weight:800; font-size: 23px; color: var(--ink); line-height: 1.3;">
+          <span class="accent">מדינת ישראל זקוקה לתשתית לאומית חדשה!</span> <br>
+          המרכז יהווה <span class="accent-mag">מנוע החוסן, החדשנות וההיערכות</span> של המשק הישראלי לעשור הקרוב!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">T+6mo</span><span class="live">T+12mo</span><span class="hot">T+24mo</span></span>
+    <span>14 / 16</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SLIDE 15 — Budget (animated)
+     ============================================ -->
+<section data-screen-label="15 Budget">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // BUDGET</span></div>
+    <div class="right"><span class="dot"></span><span>15 — MULTI-YEAR</span></div>
+  </div>
+
+  <div class="slide-pad">
+    <div style="flex-shrink: 0;">
+      <div class="h-eyebrow anim-in">// 09 — תקציב</div>
+      <h2 class="anim-in d1" style="font-family:'Rubik'; font-weight:800; font-size: 42px; line-height: 1.05; letter-spacing: -0.015em; margin: 4px 0 0;">
+        מרכז לאומי לחדשנות, ידע ומצוינות <span class="accent">בסייבר</span>
+      </h2>
+      <h3 class="anim-in d2" style="font-family:'Heebo'; font-weight:700; font-size: 28px; margin: 4px 0 0; color: var(--magenta);">תקציב רב שנתי</h3>
+    </div>
+
+    <!-- Two-col layout -->
+    <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap: 28px; margin-top: 18px; flex: 1; min-height: 0;">
+      <!-- Left: Stacked bar chart by year -->
+      <div class="anim-fade d3" style="display:flex; flex-direction: column;">
+        <div class="card-tag">// MULTI-YEAR EXPENSE BREAKDOWN</div>
+        <div style="display:flex; gap: 24px; margin-top: 8px; font-family:'Heebo'; font-size: 16px; color: var(--ink-dim); flex-wrap: wrap;">
+          <span><span class="lg-dot" style="background:#00e0ff;"></span>שיווק</span>
+          <span><span class="lg-dot" style="background:#3a8eff;"></span>הוצאות תפעוליות</span>
+          <span><span class="lg-dot" style="background:#214099;"></span>כוח אדם <em class="tag" style="font-size: 16px;">INCIC</em></span>
+          <span><span class="lg-dot" style="background:#7e4cff;"></span>מומחים סקטוריאליים</span>
+          <span><span class="lg-dot" style="background:#ff347a;"></span>טכנולוגיה</span>
+          <span><span class="lg-dot" style="background:#ffb547;"></span>פרויקטים / מחקרים</span>
+          <span><span class="lg-dot" style="background:#2ee0a8;"></span>חינוך ומודעות</span>
+        </div>
+        <style>
+          .lg-dot {
+            display: inline-block; width: 10px; height: 10px;
+            border-radius: 2px;
+            margin-inline-end: 6px;
+            vertical-align: middle;
+          }
+        </style>
+
+        <!-- SVG bar chart -->
+        <svg viewBox="0 0 700 460" preserveAspectRatio="xMidYMid meet" style="width:100%; flex: 1; min-height: 0; margin-top: 8px;" id="budgetChart">
+          <defs>
+            <linearGradient id="bg1" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#00e0ff" stop-opacity="0.6"/><stop offset="100%" stop-color="#00e0ff" stop-opacity="0.9"/></linearGradient>
+          </defs>
+
+          <!-- Grid lines -->
+          <g stroke="rgba(120,160,255,0.1)" stroke-width="1">
+            <line x1="80" y1="80"  x2="680" y2="80"/>
+            <line x1="80" y1="160" x2="680" y2="160"/>
+            <line x1="80" y1="240" x2="680" y2="240"/>
+            <line x1="80" y1="320" x2="680" y2="320"/>
+            <line x1="80" y1="400" x2="680" y2="400"/>
+          </g>
+
+          <!-- Y-axis labels (millions ILS) -->
+          <g font-family="JetBrains Mono" font-size="10" fill="#4a5378" text-anchor="end">
+            <text x="72" y="404">0</text>
+            <text x="72" y="324">15M</text>
+            <text x="72" y="244">30M</text>
+            <text x="72" y="164">45M</text>
+            <text x="72" y="84">60M+</text>
+          </g>
+
+          <!-- Bar groups: max ~64M ILS → scale factor 320 / 64M = 0.005 px per ILS -->
+          <!-- Year 1 stack at x=140, w=140 -->
+          <g class="bar-stack" data-delay="0.4">
+            <!-- start bottom (y=400), build up -->
+            <!-- Top-most = projects 16M @bottom: place bottoms first by order: marketing(285.6k), ops(2.782M), staff(13.32M), experts(12.3M), tech(10.75M), projects(16M), edu(0.36M) -->
+            <!-- We'll place them stacked, with cyan→pink palette -->
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#00e0ff" data-h="1.43"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#3a8eff" data-h="13.91"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#214099" data-h="66.6"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#7e4cff" data-h="61.5"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#ff347a" data-h="53.75"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#ffb547" data-h="80"/>
+            <rect class="b" x="140" y="400" width="140" height="0" fill="#2ee0a8" data-h="1.8"/>
+            <!-- Total label -->
+            <text x="210" y="92" text-anchor="middle" font-family="Rubik" font-weight="800" font-size="20" fill="#eaf2ff" class="bar-total">₪55.8M</text>
+            <text x="210" y="430" text-anchor="middle" font-family="Heebo" font-weight="600" font-size="14" fill="#eaf2ff">שנה #1</text>
+            <text x="210" y="448" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#00e0ff">100%</text>
+          </g>
+
+          <g class="bar-stack" data-delay="0.7">
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#00e0ff" data-h="1.57"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#3a8eff" data-h="13.91"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#214099" data-h="66.6"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#7e4cff" data-h="61.5"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#ff347a" data-h="58.8"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#ffb547" data-h="88"/>
+            <rect class="b" x="320" y="400" width="140" height="0" fill="#2ee0a8" data-h="1.98"/>
+            <text x="390" y="76" text-anchor="middle" font-family="Rubik" font-weight="800" font-size="20" fill="#eaf2ff" class="bar-total">₪58.5M</text>
+            <text x="390" y="430" text-anchor="middle" font-family="Heebo" font-weight="600" font-size="14" fill="#eaf2ff">שנה #2</text>
+            <text x="390" y="448" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#00e0ff">110%</text>
+          </g>
+
+          <g class="bar-stack" data-delay="1.0">
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#00e0ff" data-h="1.86"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#3a8eff" data-h="13.91"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#214099" data-h="66.6"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#7e4cff" data-h="61.5"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#ff347a" data-h="68.9"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#ffb547" data-h="104"/>
+            <rect class="b" x="500" y="400" width="140" height="0" fill="#2ee0a8" data-h="2.34"/>
+            <text x="570" y="60" text-anchor="middle" font-family="Rubik" font-weight="800" font-size="20" fill="#ff347a" class="bar-total">₪63.8M</text>
+            <text x="570" y="430" text-anchor="middle" font-family="Heebo" font-weight="600" font-size="14" fill="#eaf2ff">שנה #3</text>
+            <text x="570" y="448" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#ff347a">130%</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Right: Year 1 detail breakdown + summary -->
+      <div class="anim-in d4" style="display:flex; flex-direction: column; gap: 18px;">
+        <div style="padding: 22px 24px; border: 1px solid var(--line-strong); border-radius: 14px; background: rgba(12, 18, 48, 0.6);">
+          <div class="card-tag">// YEAR 1 — 100% BASELINE</div>
+          <div style="display:flex; flex-direction:column; gap: 8px; margin-top: 12px; font-family:'JetBrains Mono'; font-size: 16px;">
+            <div class="bg-row"><span>שיווק</span><span><b>₪ 285,600</b></span></div>
+            <div class="bg-row"><span>הוצאות תפעוליות</span><span><b>₪ 2,782,000</b></span></div>
+            <div class="bg-row"><span>כוח אדם במרכז <em class="tag" style="font-size: 16px;">INCIC</em></span><span><b>₪ 13,320,000</b></span></div>
+            <div class="bg-row"><span>סה"כ לסעיף מומחים סקטוריאליים</span><span><b>₪ 12,300,000</b></span></div>
+            <div class="bg-row"><span>הוצאות טכנולוגיה</span><span><b>₪ 10,750,000</b></span></div>
+            <div class="bg-row"><span>הוצאות פרויקטים / מחקרים</span><span><b>₪ 16,000,000</b></span></div>
+            <div class="bg-row"><span>הוצאות חינוך ומודעות</span><span><b>₪ 360,000</b></span></div>
+          </div>
+          <style>
+            .bg-row {
+              display: flex; justify-content: space-between; align-items: center;
+              padding: 5px 0;
+              border-bottom: 1px dashed var(--line);
+              color: var(--ink-dim);
+            }
+            .bg-row b { color: var(--ink); font-weight: 700; }
+          </style>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="padding: 16px; border: 1px solid var(--cyan); border-radius: 12px; background: linear-gradient(180deg, rgba(0,224,255,0.08), transparent);">
+            <div class="card-tag">// סה"כ הוצאה</div>
+            <div style="font-family:'Rubik'; font-weight:900; font-size: 24px; color: var(--ink); margin-top: 4px;">₪55,797,600</div>
+          </div>
+          <div style="padding: 16px; border: 1px solid var(--green); border-radius: 12px; background: linear-gradient(180deg, rgba(46,224,168,0.08), transparent);">
+            <div class="card-tag" style="color: var(--green);">// סה"כ מימון</div>
+            <div style="font-family:'Rubik'; font-weight:900; font-size: 24px; color: var(--green); margin-top: 4px;">₪9,000,000</div>
+          </div>
+          <div style="grid-column: span 2; padding: 18px 22px; border: 1px solid var(--magenta); border-radius: 12px; background: linear-gradient(90deg, rgba(255,52,122,0.12), rgba(255,52,122,0.04));">
+            <div class="card-tag" style="color: var(--magenta);">// סה"כ תקציב מבוקש</div>
+            <div style="display:flex; justify-content:space-between; align-items: baseline; margin-top: 4px;">
+              <div style="font-family:'Rubik'; font-weight:900; font-size: 36px; color: var(--magenta);" data-counter="46797600">₪46,797,600</div>
+              <div style="font-family:'Heebo'; font-weight:600; font-size: 16px; color: var(--ink-dim);">שנה #1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim-in d6" style="margin-top: 12px; padding: 12px 20px; border: 1px solid var(--magenta); border-radius: 12px; background: linear-gradient(90deg, rgba(255,52,122,0.08), rgba(33,64,153,0.04)); flex-shrink: 0;">
+      <div style="display:flex; gap: 14px; align-items: baseline; flex-wrap: wrap;">
+        <span style="font-family:'Rubik'; font-weight:800; font-size: 19px; color: var(--magenta);">כן, זו השקעה גדולה!</span>
+        <span style="font-family:'Rubik'; font-weight:700; font-size: 17px; color: var(--ink);">אבל הימנעות מהשקעה עשוי לעלות למדינה הרבה יותר!</span>
+      </div>
+      <div style="font-family:'Heebo'; font-weight:500; font-size: 16px; color: var(--ink-dim); margin-top: 4px; line-height: 1.4;">
+        אירוע סייבר משמעותי אחד על תשתית קריטית, או מתקפה משולבת מבוססת <em class="tag">AI</em> עלולים לגרום לנזק כלכלי, ביטחוני ותודעתי עצום. <span class="bright" style="font-weight:700;">המרכז נועד לצמצם בדיוק את הסיכון הזה.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">Y1 // 100%</span><span class="live">Y2 // 110%</span><span class="hot">Y3 // 130%</span></span>
+    <span>15 / 16</span>
+  </div>
+
+  <script>
+    (function() {
+      const slide = document.currentScript.closest('section');
+      const animate = () => {
+        const bars = slide.querySelectorAll('rect.b');
+        const stacks = {};
+        bars.forEach(b => {
+          const x = b.getAttribute('x');
+          (stacks[x] = stacks[x] || []).push(b);
+        });
+        Object.values(stacks).forEach((stack, si) => {
+          let bottomY = 400;
+          stack.forEach((b, i) => {
+            const h = parseFloat(b.getAttribute('data-h'));
+            const targetY = bottomY - h;
+            const delay = 400 + si * 220 + i * 80;
+            // reset first
+            b.setAttribute('y', 400);
+            b.setAttribute('height', 0);
+            b.style.transition = 'none';
+            requestAnimationFrame(() => {
+              setTimeout(() => {
+                b.style.transition = 'all 0.9s cubic-bezier(0.16, 1, 0.3, 1)';
+                b.setAttribute('y', targetY);
+                b.setAttribute('height', h);
+              }, delay);
+            });
+            bottomY = targetY;
+          });
+        });
+
+        // Count-up the big ₪ number
+        const numEl = slide.querySelector('[data-counter]');
+        if (numEl) {
+          const target = parseInt(numEl.getAttribute('data-counter'));
+          const dur = 1800;
+          const start = performance.now();
+          const fmt = n => '₪' + Math.round(n).toLocaleString('en-US');
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / dur);
+            const eased = 1 - Math.pow(1 - t, 3);
+            numEl.textContent = fmt(target * eased);
+            if (t < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      };
+      const obs = new MutationObserver(muts => {
+        for (const m of muts) {
+          if (m.attributeName === 'data-deck-active' && slide.hasAttribute('data-deck-active')) {
+            setTimeout(animate, 200);
+          }
+        }
+      });
+      obs.observe(slide, { attributes: true });
+      if (slide.hasAttribute('data-deck-active')) setTimeout(animate, 400);
+    })();
+  </script>
+</section>
+
+<!-- ============================================
+     SLIDE 16 — Thank You
+     ============================================ -->
+<section data-screen-label="16 Thank You">
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Radial close -->
+  <svg style="position:absolute; inset:0; width:100%; height:100%; opacity:0.6;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <radialGradient id="finalGlow" cx="50%" cy="50%">
+        <stop offset="0%" stop-color="#00e0ff" stop-opacity="0.4"/>
+        <stop offset="40%" stop-color="#3658d4" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#04060f" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="960" cy="540" r="700" fill="url(#finalGlow)"/>
+    <g style="transform-origin: 960px 540px; animation: spin-slow 90s linear infinite;">
+      <circle cx="960" cy="540" r="320" fill="none" stroke="#00e0ff" stroke-width="1" opacity="0.3"/>
+      <circle cx="960" cy="540" r="420" fill="none" stroke="#00e0ff" stroke-width="1" opacity="0.2" stroke-dasharray="4,8"/>
+      <circle cx="1280" cy="540" r="6" fill="#00e0ff"/>
+    </g>
+    <g style="transform-origin: 960px 540px; animation: spin-slow 120s linear infinite reverse;">
+      <circle cx="960" cy="540" r="520" fill="none" stroke="#ff347a" stroke-width="1" opacity="0.2"/>
+      <circle cx="1480" cy="540" r="5" fill="#ff347a"/>
+    </g>
+  </svg>
+
+  <div class="chrome-top">
+    <div class="brand"><div class="brand-mark"></div><span>INCIC // CLOSING</span></div>
+    <div class="right"><span class="dot"></span><span>16 — END</span></div>
+  </div>
+
+  <div style="position: absolute; inset: 0; display:flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;">
+    <img src="assets/incic-logo.png" alt="INCIC" class="anim-scale" style="height: 120px; filter: drop-shadow(0 0 32px rgba(0,224,255,0.4));">
+
+    <div class="h-eyebrow anim-in d2" style="text-align: center;">מרכז לאומי לחדשנות, ידע ומצוינות בסייבר</div>
+
+    <h1 class="anim-in d3" style="font-family:'Rubik'; font-weight: 900; font-size: 180px; line-height: 1; margin: 0; background: var(--grad-cyber); -webkit-background-clip:text; background-clip:text; color: transparent; letter-spacing: -0.04em;">
+      תודה רבה!
+    </h1>
+
+    <div class="anim-in d5" style="display:flex; gap: 36px; align-items:center; margin-top: 12px; font-family:'JetBrains Mono'; font-size: 16px; letter-spacing: 0.2em; color: var(--ink-faint); text-transform: uppercase;">
+      <span>ISRAELI NATIONAL CYBERSECURITY</span>
+      <span style="color: var(--cyan);">◆</span>
+      <span>INNOVATION CENTER</span>
+    </div>
+  </div>
+
+  <div class="chrome-foot">
+    <span class="ticker"><span class="live">PROPOSAL // CONCLUDED</span><span>READY FOR REVIEW</span></span>
+    <span>16 / 16</span>
+  </div>
+</section>
+
+</deck-stage>
+
+<script type="application/json" id="speaker-notes">["","","","","","","","","","","","","","","",""]</script>
+<script src="deck-stage.js"></script>
+<script>
+  // Re-trigger entrance animations every time a slide becomes active.
+  // Toggle data-replay between "1" and "2" so CSS picks up a fresh
+  // animation-name → restarts the keyframes.
+  (function() {
+    const stage = document.querySelector('deck-stage');
+    if (!stage) return;
+    const replay = (slide) => {
+      if (!slide) return;
+      const cur = slide.getAttribute('data-replay');
+      slide.setAttribute('data-replay', cur === '1' ? '2' : '1');
+    };
+    stage.addEventListener('slidechange', (e) => {
+      replay(e.detail.slide);
+    });
+    // Run once on mount for the initial slide
+    requestAnimationFrame(() => {
+      const active = stage.querySelector('section[data-deck-active]');
+      if (active) replay(active);
+    });
+  })();
+</script>
+</body>
+</html>
