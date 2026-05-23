@@ -2085,11 +2085,16 @@
   var label = document.getElementById('fs-label');
   if (!btn) return;
 
-  function updateIcon() {
+  function setPresenting(on) {
+    window.postMessage({ __omelette_presenting: on }, '*');
+  }
+
+  function updateState() {
     var isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
     iconEnter.style.display = isFs ? 'none' : 'block';
     iconExit.style.display = isFs ? 'block' : 'none';
     if (label) label.textContent = isFs ? '' : 'FULL SCREEN';
+    setPresenting(isFs);
   }
 
   btn.addEventListener('click', function(e) {
@@ -2105,8 +2110,8 @@
     }
   });
 
-  document.addEventListener('fullscreenchange', updateIcon);
-  document.addEventListener('webkitfullscreenchange', updateIcon);
+  document.addEventListener('fullscreenchange', updateState);
+  document.addEventListener('webkitfullscreenchange', updateState);
 })();
 </script>
 </body>
